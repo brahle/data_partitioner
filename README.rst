@@ -1,5 +1,5 @@
-Testing Harness
-===============
+Data Partitioner
+================
 
 Simple project that can be used to consistently partition a data set
 into two parts - a test set and a training set. There are also helpful
@@ -12,7 +12,7 @@ The easiest way to install this module is to install it via ``pip``:
 
 ::
 
-    $ pip install TestingHarness
+    $ pip install data_partitioner
 
 Usage
 =====
@@ -29,12 +29,13 @@ You have two configuration options you can specify:
    training set. It defaults to ``0.8``.
 -  ``partitioning_function`` - the function that's used to partition the
    dataset.
--  It defaults to ``harness.pseudorandom_function``, which will randomly
-   assign every element of the dataset to either the test set or the
-   training set.
+-  It defaults to ``data_partitioner.pseudorandom_function``, which will
+   randomly assign every element of the dataset to either the test set
+   or the training set.
 -  Another useful existing option you can set it to is
-   ``harness.LinearFakeRandomFunction``, which will make sure that no
-   elements in the training set come after any elements of the test set.
+   ``data_partitioner.LinearFakeRandomFunction``, which will make sure
+   that no elements in the training set come after any elements of the
+   test set.
 -  You can also manually write this callable, which will take one
    parameter as input - the index of the element currently considered.
 
@@ -43,7 +44,7 @@ Example
 
 ::
 
-    from harness import DatasetSuplier
+    from data_partitioner import DatasetSuplier
 
     dataset = [
         ('Alice', 10, 23, 401),
