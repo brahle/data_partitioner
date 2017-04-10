@@ -1,6 +1,5 @@
 """Setup file for Data Partitioner"""
 
-from unittest import TestLoader
 from setuptools import setup
 
 setup(
@@ -8,6 +7,8 @@ setup(
     version='0.1',
     url='https://github.com/brahle/data_partitioner',
     license='GNU Lesser General Public License (LGPL), Version 3',
+    author='brahle',
+    author_email='brahle@gmail.com',
     description='Consistently partitions a dataset into a training set and a test set',
     long_description=open('README.rst', encoding='utf-8').read(),
     classifiers=[
